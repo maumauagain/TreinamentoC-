@@ -1,0 +1,9 @@
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\obj\Debug\netstandard2.0\Activity.ObjectModel.csprojResolveAssemblyReference.cache
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\obj\Debug\netstandard2.0\Activity.ObjectModel.csproj.CoreCompileInputs.cache
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\obj\Debug\netstandard2.0\Activity.ObjectModel.AssemblyInfoInputs.cache
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\obj\Debug\netstandard2.0\Activity.ObjectModel.AssemblyInfo.cs
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\bin\Debug\netstandard2.0\Activity.ObjectModel.deps.json
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\bin\Debug\netstandard2.0\Activity.ObjectModel.dll
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\bin\Debug\netstandard2.0\Activity.ObjectModel.pdb
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\obj\Debug\netstandard2.0\Activity.ObjectModel.dll
+C:\Users\amauri\source\repos\Projeto Base\ClassLibrary1\obj\Debug\netstandard2.0\Activity.ObjectModel.pdb
