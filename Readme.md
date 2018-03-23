@@ -6,4 +6,4 @@ Criar dois projetos na mesma solution e instanciar Projetos e Pessoas e apresent
 
 ## Projeto Base 2:
 
-Apenas algumas Modificações no primeiro projeto, só que utilizando estruturas de repetições e condições :)
+Apenas algumas Modificações no primeiro projeto, só que utilizando estruturas de repetições e condições insanas :)
