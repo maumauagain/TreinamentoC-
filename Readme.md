@@ -2,4 +2,4 @@
 -----------------
 
 ## Projeto Base:
-Criar dois projetos na mesma solution e instanciar Projetos e Pessoas e apresentar na classe Main :)
+Criar dois projetos na mesma solution e instanciar Projetos e Pessoas e apresentar na classe Main do Activity Con :) 
