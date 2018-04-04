@@ -1,166 +1,200 @@
 ﻿using System;
 using Activity.ObjectModel;
+using System.Collections.Generic;
+
 namespace Activity.ConUl
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
-           Project[] BusinessProject = new Project[10];
-            int qtd;
-            int qtdUser;
-            int qtdTasks; 
+            Project[] BusinessProject = new Project[10];
 
-
-            void Menu()
+             void Menu()
             {
-                Console.WriteLine("1 - Criar Lista");
-                Console.WriteLine("2 - Listar");
-                Console.WriteLine("0 - Sair");
-                int opcao = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("1- Criar Projeto");
+                Console.WriteLine("2- Listar Projeto");
+                Console.WriteLine("3- Atualizar Projeto");
+                Console.WriteLine("4- Deletar Projeto");
+                Console.WriteLine("0- Finalizar Programa!!!");
+
+                int opcao = Int16.Parse(Console.ReadLine());
+                int qtdProj;
+                int qtdUser;
 
                 switch (opcao)
                 {
                     case 1:
-                        Console.WriteLine("Quantidade de Projetos: ");
-                        qtd = Int16.Parse(Console.ReadLine());
-
-                        for (int i = 0; i < qtd; i++) {
-
-                            BusinessProject[i] = new Project();
-
-                            Console.WriteLine("id do " + (i + 1) + "º projeto");
-                            BusinessProject[i].Id = Int32.Parse(Console.ReadLine());
-                           
-                            Console.WriteLine("Nome do " + (i + 1) + "º projeto");
-                            BusinessProject[i].Title = Console.ReadLine();
-
-                            Console.WriteLine("Codigo do " + (i + 1) + "º projeto");
-                            BusinessProject[i].Code = Console.ReadLine();
-
-                            Console.WriteLine("Data de inicio do " + (i + 1) + "º projeto");
-                            BusinessProject[i].StartDate = DateTime.Parse(Console.ReadLine());
-
-                            Console.WriteLine("Data estimada para o fim do " + (i + 1) + "º projeto");
-                            BusinessProject[i].EstimatedEndDate = DateTime.Parse(Console.ReadLine());
-
-                            Console.WriteLine("Data de conclusão do " + (i + 1) + "º projeto");
-                            BusinessProject[i].RealEndDate = DateTime.Parse(Console.ReadLine());
-
-                            Console.WriteLine("Responsável do " + (i + 1) + "º projeto");
-                            BusinessProject[i].Responsible.Title = Console.ReadLine();
+                        Console.WriteLine("Quantidade de projetos!");
+                        qtdProj = Int16.Parse(Console.ReadLine());
+                        
+                        for(int p = 0; p < qtdProj; p++)
+                        {
+                            criaProjeto(p);
 
                             Console.Clear();
 
-                            //USUARIOS POAR
+                            //USUARIOS DO PROJETO
 
-                            Console.WriteLine("Quantidade de Usuários: ");
-                            qtdUser =  Int16.Parse(Console.ReadLine());
+                            Console.WriteLine("Quantidade de Usuarios: ");
+                            qtdUser = Int16.Parse(Console.ReadLine());
 
-                            for (int j = 0; j < qtdUser; j++) {
+                            criaUsuario(p, qtdUser);
 
-                                BusinessProject[i].userList[j] = new Person();
+                            // TAREFAS DO PROJETO
 
-                                Console.WriteLine("id do " + (j + 1) + "º usuario");
-                                BusinessProject[i].userList[j].Id = Int32.Parse(Console.ReadLine());
+                            //var person = new Person();
+                            //var tasks = new List<Tasks>();
 
-                                Console.WriteLine("Nome do " + (j + 1) + "º usuario");
-                                BusinessProject[i].userList[j].Title = Console.ReadLine();
+                            //person.Title = Console.ReadLine();
+                            //var task = new Tasks
+                            //{
+                            //    Id = Int32.Parse(Console.ReadLine()),
+                            //    Title = Console.ReadLine(),
+                            //    WorkHours = Decimal.Parse(Console.ReadLine()),
+                            //    TaskType = ETaskType.CasosDeTeste
 
-                                Console.WriteLine("Data de nascimento do " + (j + 1) + "º usuario");
-                                BusinessProject[i].userList[j].BirthDate = DateTime.Parse(Console.ReadLine());
+                            //};
 
-                                Console.WriteLine("Email do " + (j + 1) + "º usuario");
-                                BusinessProject[i].userList[j].Email = Console.ReadLine();
+                            //tasks.Add(task);
 
-                                Console.Clear();
-                            }
+                            //BusinessProject[p].Tasks.Add(person, tasks);
 
-
-                            //TASKS POARR
-
-                            Console.WriteLine("Quantidade de Tarefas: ");
-                            qtdTasks = Int16.Parse(Console.ReadLine());
-
-                            for (int t = 0; t < qtdTasks; t++) {
-                                BusinessProject[i].taskList[t] = new Tasks();
-
-                                Console.WriteLine("ID da tarefa: ");
-                                BusinessProject[i].taskList[t].Id = Int32.Parse(Console.ReadLine());
-
-                                Console.WriteLine("Nome da tarefa: ");
-                                BusinessProject[i].taskList[t].Title = Console.ReadLine();
-
-                                Console.WriteLine("Nome da Responsavel: ");
-                                BusinessProject[i].taskList[t].Responsible.Title = Console.ReadLine();
-
-                                Console.WriteLine("Tempo da tarefa: ");
-                                BusinessProject[i].taskList[t].WorkHours = Decimal.Parse(Console.ReadLine());
-
-                                Console.WriteLine("Tipo da tarefa:\n1-Codificação\n2-CasosDeTeste\n3-Defeito ");
-                                Int16 type = Int16.Parse(Console.ReadLine());
-
-                                switch (type) {
-                                    case 1:
-                                        BusinessProject[i].taskList[t].TaskType = (ETaskType)ETaskType.Codificação;
-                                        break;
-                                    case 2:
-                                        BusinessProject[i].taskList[t].TaskType = (ETaskType)ETaskType.CasosDeTeste;
-                                        break;
-                                    case 3:
-                                        BusinessProject[i].taskList[t].TaskType = (ETaskType)ETaskType.Defeito;
-                                        break;
-                                }
-
-                                Console.Clear();
-                            }
+                            createTask(p);
                         }
-                        Menu();
                         break;
+
                     case 2:
-                        for(int p = 0; p < BusinessProject.Length && BusinessProject[p] != null; p++) {
-
-                            Console.WriteLine("\n\nID: " + BusinessProject[p].Id);
-                            Console.WriteLine("Nome: " + BusinessProject[p].Title);
-                            Console.WriteLine("Codigo: " + BusinessProject[p].Code);
-                            Console.WriteLine("Data de Inicio: " + BusinessProject[p].StartDate);
-                            Console.WriteLine("Data Estimada: " + BusinessProject[p].EstimatedEndDate);
-                            Console.WriteLine("Data de Conclusao: " + BusinessProject[p].RealEndDate);
-                            Console.WriteLine("Responsável: " + BusinessProject[p].Responsible.Title);
-
-                            for (int i = 0; i < BusinessProject[p].userList.Length && BusinessProject[p].userList[i] != null; i++) {
-
-                                Console.WriteLine("Id do Usuario: " + BusinessProject[p].userList[i].Id);
-                                Console.WriteLine("Nome do Usuario: " + BusinessProject[p].userList[i].Title);
-                                Console.WriteLine("Data de Nascimento: " + BusinessProject[p].userList[i].BirthDate);
-                                Console.WriteLine("Email do Usuario: " + BusinessProject[p].userList[i].Email);
-                            }
-                            for (int t = 0; t < BusinessProject[p].taskList.Length && BusinessProject[p].taskList[t] != null; t++) {
-
-                                Console.WriteLine("Id da Tarefa: " + BusinessProject[p].taskList[t].Id);
-                                Console.WriteLine("Nome da Tarefa: " + BusinessProject[p].taskList[t].Title);
-                                Console.WriteLine("Responsavel pela Tarefa: " + BusinessProject[p].taskList[t].Responsible.Title);
-                                Console.WriteLine("Horas Gastas da Tarefa: " + BusinessProject[p].taskList[t].WorkHours);
-                                Console.WriteLine("Tipo da tarefa da Tarefa: " + BusinessProject[p].taskList[t].TaskType);
-                            }
-
-                        //Console.ReadKey();
-                        }
-
-                        Menu();
                         break;
-                    case 0:
+
+                    case 3:
                         break;
+
+                    case 4:
+                        break;
+
+                    case 5:
+                        break;
+
                     default:
-                        Console.WriteLine("No one");
+                        Console.WriteLine("Não tem!!!");
                         break;
-                    
                 }
+
+
+
+            }
+
+            void criaProjeto(int p)
+            {
+                BusinessProject[p] = new Project();
+
+                Console.WriteLine("ID do projeto: ");
+                BusinessProject[p].Id = Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("Nome do projeto: ");
+                BusinessProject[p].Title = Console.ReadLine();
+
+                Console.WriteLine("Código do projeto: ");
+                BusinessProject[p].Code = Console.ReadLine();
+
+                Console.WriteLine("Data de inicio do projeto: ");
+                BusinessProject[p].StartDate = DateTime.Parse(Console.ReadLine());
+
+                Console.WriteLine("Data estimada do projeto: ");
+                BusinessProject[p].EstimatedEndDate = DateTime.Parse(Console.ReadLine());
+
+                Console.WriteLine("Data de conclusao do projeto: ");
+                BusinessProject[p].RealEndDate = DateTime.Parse(Console.ReadLine());
+
+                Console.WriteLine("Responsável pelo projeto: ");
+                BusinessProject[p].Responsible.Title = Console.ReadLine();
+            }
+
+            void criaUsuario(int p, int qtdUser)
+            {
+
+                for (int u = 0; u < qtdUser; u++)    
+                {
+                    Console.WriteLine("1- ID\n2- Nome\n3- Data Nasc\n4- Email\n");
+                    BusinessProject[p].members.Add(new Person()
+                    {
+                        Id = Int32.Parse(Console.ReadLine()),
+                        Title = Console.ReadLine(),
+                        BirthDate = DateTime.Parse(Console.ReadLine()),
+                        Email = Console.ReadLine()
+
+                    });
+                    Console.Clear();
+                }
+                
+            }
+
+            void createTask(int p)
+            {
+                var person = new Person();
+                var tasks = new List<Tasks>();
+
+                Console.WriteLine("Name of the responsible: ");
+                string personName = Console.ReadLine();
+
+                Console.WriteLine("ID of the Task: ");
+                int id = Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("Name of the Task");
+                string taskName = Console.ReadLine();
+
+                Console.WriteLine("Scheduled Time: ");
+                decimal workHour = decimal.Parse(Console.ReadLine());
+
+                Console.WriteLine("Task type: ");
+                Console.WriteLine("1- Code Task");
+                Console.WriteLine("2- Test Case Task");
+                Console.WriteLine("3- Correction Task");
+
+                int type = Int16.Parse(Console.ReadLine());
+                ETaskType opcao = (ETaskType)type;
+
+                //switch (type)
+                //{
+                //    case 1:
+                //        opcao = ETaskType.Codificação;
+                //        break;
+                //    case 2:
+                //        opcao = ETaskType.CasosDeTeste;
+                //        break;
+                //    case 3:
+                //        opcao = ETaskType.Defeito;
+                //        break;
+                //    default:
+                //        Console.WriteLine("Invalid option");
+                //        break;
+                //}
+
+                person.Title = personName;
+
+                var task = new Tasks
+                {
+                    Id = id,
+                    Title = taskName,
+                    WorkHours = workHour,
+                    TaskType = opcao
+
+                };
+
+                tasks.Add(task);
+
+                BusinessProject[p].Tasks.Add(person, tasks);
+
+
             }
 
             Menu();
 
         }
+
+
+           
     }
 }

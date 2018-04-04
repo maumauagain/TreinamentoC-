@@ -37,3 +37,16 @@ C:\Users\amauri\source\repos\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2
 C:\Users\amauri\source\repos\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.AssemblyInfo.cs
 C:\Users\amauri\source\repos\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.dll
 C:\Users\amauri\source\repos\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.pdb
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ConUl.deps.json
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ConUl.runtimeconfig.json
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ConUl.runtimeconfig.dev.json
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ConUl.dll
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ConUl.pdb
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ObjectModel.dll
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\bin\Debug\netcoreapp2.0\Activity.ObjectModel.pdb
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.csprojResolveAssemblyReference.cache
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.csproj.CoreCompileInputs.cache
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.AssemblyInfoInputs.cache
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.AssemblyInfo.cs
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.dll
+C:\Users\amauri\Desktop\GitHub\Treinamento C#\TreinamentoC-\Projeto Base 3\Activity.ConUl\obj\Debug\netcoreapp2.0\Activity.ConUl.pdb

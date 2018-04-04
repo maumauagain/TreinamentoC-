@@ -16,9 +16,9 @@ namespace Activity.ObjectModel
 
         public Person Responsible = new Person();
 
-        public Tasks[] taskList = new Tasks[10];
+        public Dictionary<Person, List<Tasks>> Tasks = new Dictionary<Person, List<Tasks>>();
 
-        public Person[] userList = new Person[10];
+        public List<Person> members = new List<Person>();
 
         public static Project GetProject()
         {

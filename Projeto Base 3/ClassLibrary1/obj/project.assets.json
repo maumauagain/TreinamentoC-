@@ -186,11 +186,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\amauri\\source\\repos\\Projeto Base 3\\ClassLibrary1\\Activity.ObjectModel.csproj",
+      "projectUniqueName": "C:\\Users\\amauri\\Desktop\\GitHub\\Treinamento C#\\TreinamentoC-\\Projeto Base 3\\ClassLibrary1\\Activity.ObjectModel.csproj",
       "projectName": "Activity.ObjectModel",
-      "projectPath": "C:\\Users\\amauri\\source\\repos\\Projeto Base 3\\ClassLibrary1\\Activity.ObjectModel.csproj",
+      "projectPath": "C:\\Users\\amauri\\Desktop\\GitHub\\Treinamento C#\\TreinamentoC-\\Projeto Base 3\\ClassLibrary1\\Activity.ObjectModel.csproj",
       "packagesPath": "C:\\Users\\amauri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amauri\\source\\repos\\Projeto Base 3\\ClassLibrary1\\obj\\",
+      "outputPath": "C:\\Users\\amauri\\Desktop\\GitHub\\Treinamento C#\\TreinamentoC-\\Projeto Base 3\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
