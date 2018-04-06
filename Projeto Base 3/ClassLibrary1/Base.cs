@@ -9,7 +9,7 @@ namespace ProjetoBase
         public string Title { get; set; }
         public string Comments { get; set; }
         public int Id { get; set; }
-        public bool Removed { get; set; }
+        public int Removed { get; set; }
 
         public void Print()
         {

@@ -6,7 +6,7 @@ namespace Activity.ObjectModel
 {
     public enum ETaskType
     {
-        Codificação,
+        Codificação = 1,
         CasosDeTeste,
         Defeito
     }

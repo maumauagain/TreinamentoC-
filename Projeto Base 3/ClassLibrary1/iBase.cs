@@ -7,7 +7,7 @@ namespace Activity.ObjectModel
     interface iBase
     {
         Int32 Id { get; set; }
-        Boolean Removed { get; set; }
+        int Removed { get; set; }
 
         void Print();
 
