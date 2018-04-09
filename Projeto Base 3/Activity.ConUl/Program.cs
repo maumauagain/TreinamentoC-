@@ -66,6 +66,10 @@ namespace Activity.ConUl
                         break;
 
                     case 3:
+                        Console.Clear();
+                        AlteraProj();
+
+                        Menu();
                         break;
 
                     case 4:
@@ -217,7 +221,7 @@ namespace Activity.ConUl
                     if(BusinessProject[p].Removed == 0)
                     {
                         Console.WriteLine("\n----------Project " + (p + 1) + " ----------");
-                        Console.WriteLine("\nId of the Project..............: " + BusinessProject[p].Id);
+                        Console.WriteLine("\nId of the Project................: " + BusinessProject[p].Id);
                         Console.WriteLine("Name of the Project................: " + BusinessProject[p].Title);
                         foreach (var user in BusinessProject[p].members)
                         {
@@ -270,6 +274,50 @@ namespace Activity.ConUl
                 Console.WriteLine("\nProjeto nao encontrado!\n");
                 return false;
                 
+            }
+
+            bool AlteraProj()
+            {
+                int id;
+
+                Console.WriteLine("Id do projeto que deseja alterar: ");
+                id = Int32.Parse(Console.ReadLine());
+
+                for(int p = 0; p < BusinessProject.Length && BusinessProject[p] != null; p++)
+                {
+                    if(BusinessProject[p].Id == id)
+                    {
+                        Console.WriteLine("Campos para alterar: \n1- Nome\n2- Código");
+                        int op = int.Parse(Console.ReadLine());
+
+                        if(op == 1)
+                        {
+                            Console.WriteLine("Digite o novo nome: ");
+                            BusinessProject[p].Title = Console.ReadLine();
+
+                            Console.WriteLine("Nome do projeto alterado com sucesso! ");
+
+                        }
+
+                        else if(op == 2)
+                        {
+                            Console.WriteLine("Digite o novo codigo: ");
+                            BusinessProject[p].Code = Console.ReadLine();
+
+                            Console.WriteLine("Código do projeto alterado com sucesso! ");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Opcao nao encontrada");
+                            return false;
+                        }
+
+                        return true;
+                    }
+                }
+                Console.WriteLine("Projeto com este Id não encontrado");
+                return false;
             }
 
             Menu();
