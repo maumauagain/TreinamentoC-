@@ -18,23 +18,48 @@ namespace Activity.ConUl
             string CONNECTION_STRING = @"Data source=localhost; Initial catalog=BaseProject; Integrated Security=true";
             //var db = new SqlConnection(CONNECTION_STRING);
 
-            using (var db = new SqlConnection(CONNECTION_STRING))
+            void CreateUser()
             {
-                using (var cmd = new SqlCommand("", db))
+                using (var db = new SqlConnection(CONNECTION_STRING))
                 {
-                    cmd.CommandText = @"
+                    using (var cmd = new SqlCommand("", db))
+                    {
+                        cmd.CommandText = @"
                         insert into Persons
                         values (@id, @name, @birthdate, @email)";
-                    cmd.Parameters.AddWithValue("@id", Int32.Parse(Console.ReadLine()));
-                    cmd.Parameters.AddWithValue("@name", Console.ReadLine());
-                    cmd.Parameters.AddWithValue("@birthdate", DateTime.Parse(Console.ReadLine()));
-                    cmd.Parameters.AddWithValue("@email", Console.ReadLine());
-                    db.Open();
-                    cmd.ExecuteNonQuery();
-                    db.Close();
-                    
+                        cmd.Parameters.AddWithValue("@id", Int32.Parse(Console.ReadLine()));
+                        cmd.Parameters.AddWithValue("@name", Console.ReadLine());
+                        cmd.Parameters.AddWithValue("@birthdate", DateTime.Parse(Console.ReadLine()));
+                        cmd.Parameters.AddWithValue("@email", Console.ReadLine());
+                        db.Open();
+                        cmd.ExecuteNonQuery();
+                        db.Close();
+
+                    }
                 }
             }
+
+            void UpdateUser()
+            {
+                using (var db = new SqlConnection(CONNECTION_STRING))
+                {
+                    using (var cmd = new SqlCommand("", db))
+                    {
+                        cmd.CommandText = @"
+                        update Persons
+                        set name = @title
+                        where id = @id";
+                        cmd.Parameters.AddWithValue("@title", Console.ReadLine());
+                        cmd.Parameters.AddWithValue("@id", 1);
+                        db.Open();
+                        cmd.ExecuteNonQuery();
+                        db.Close();
+
+                    }
+                }
+            }
+
+            
 
             Console.ReadKey();
 
